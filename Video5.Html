@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo con Logo Animado</title>
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        video {
+            width: 125%;
+            height: auto;
+        }
+        .logo{
+position:absolute; 
+top :10%; 
+left :45%;  
+width :150px ; 
+height:auto;  
+animation-name:mueveArribaAbajo ;
+animation-duration:.9s ;  
+animation-iteration-count:.9 ;
+} 
+
+ @keyframes mueveArribaAbajo{     
+      from{opacity:.3 ;top :-120 px;}      
+      to{ opacity:.6;top :-130 px;}    
+ }     
+    </style>
+</head>
+<body>
+ <div class="video-container">
+    <video autoplay muted loop>
+        <source src="5.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de vídeo.
+    </video>
+    <img src="Img.png" alt="Logo" class="logo">
+</div>
+</body>
+</html>
