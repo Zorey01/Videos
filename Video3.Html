@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo con Logo Animado</title>
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        video {
+            width: 125%;
+            height: auto;
+        }
+        .logo {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: auto;
+    animation: rotateLogo 5s infinite linear;
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+    </style>
+</head>
+<body>
+ <div class="video-container">
+    <video autoplay muted loop>
+        <source src="3.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de vídeo.
+    </video>
+    <img src="Img.png" alt="Logo" class="logo">
+</div>
+</body>
+</html>
